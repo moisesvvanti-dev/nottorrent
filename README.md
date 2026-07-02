@@ -1,90 +1,105 @@
 # NotTorrent - Stremio Addon
 
-Buscador de torrents para películas y series integrado con Stremio.
+A Stremio addon that provides torrent-based streaming for movies and series using public torrent search APIs and TMDB for metadata.
 
-## Características
+## Features
 
-- 🔍 Búsqueda de torrents en múltiples fuentes (1337x, torrentapi)
-- 🎬 Soporte para películas y series
-- 🌐 Información de TMDB (título, póster, descripción)
-- 🌍 Clasificación por idioma (CAST, LAT, VO, VOS, VOSE)
-- 🔗 Enlaces magnet y URLs de torrent
-- 📺 Streams compatibles con Stremio
+- **Movie Catalog**: Browse trending movies and search by title
+- **Series Catalog**: Browse trending TV shows and search by title  
+- **Torrent Streams**: Search and stream torrents directly in Stremio
+- **TMDB Integration**: Rich metadata from The Movie Database
+- **Episode Support**: Find specific episodes for TV series
 
-## Instalación
+## Installation
 
-### Opción 1: Instalar como addon en Stremio
+### Option 1: Deploy to Heroku (Recommended)
 
-1. Abrir Stremio
-2. Ir a **Addons** > **Install Addon**
-3. Introducir la URL del addon:
-   ```
-   https://tu-servidor.com/manifest.json
-   ```
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-### Opción 2: Ejecutar localmente
+Or manually:
+```bash
+heroku create nottorrent-addon
+heroku push main master
+heroku open
+```
+
+### Option 2: Run Locally
 
 ```bash
+# Clone the repository
 git clone https://github.com/moisesvvanti/nottorrent.git
 cd nottorrent
+
+# Install dependencies
 pip install -r requirements.txt
-# Configurar TMDB_API_KEY como variable de entorno (opcional)
-export TMDB_API_KEY="tu_key_de_tmdb"
+
+# Run the server
 python server.py
 ```
 
-### Opción 3: Deploy en Railway / Render / Heroku
+The server will start on `http://localhost:3000`
 
-1. Subir este repo a GitHub
-2. Conectar en Railway/Render
-3. Establecer variable `TMDB_API_KEY` (opcional)
-4. Deploy automático
+### Option 3: Deploy to Railway
 
-## Configuración
+1. Go to [railway.app](https://railway.app)
+2. Connect your GitHub repo
+3. Deploy automatically
 
-### Variables de entorno
+### Option 4: Deploy to Render
 
-| Variable | Descripción | Opcional |
-|----------|-------------|----------|
-| `TMDB_API_KEY` | API Key de TheMovieDB para información extra | Sí |
-| `PORT` | Puerto del servidor (default: 7000) | Sí |
-| `FLASK_DEBUG` | Modo debug (default: false) | Sí |
+1. Go to [render.com](https://render.com)
+2. Create a new Web Service
+3. Connect your GitHub repo
+4. Set start command: `gunicorn server:app`
 
-### Obtener TMDB API Key
+## Adding to Stremio
 
-1. Ir a [themoviedb.org](https://www.themoviedb.org/)
-2. Crear cuenta y solicitar API Key
-3. Usar la API Key v3 en la variable de entorno
+1. Open Stremio
+2. Go to **Addons** → **Install from URL**
+3. Enter your addon URL (e.g., `https://your-addon.herokuapp.com/manifest.json`)
+4. Click **Install**
 
-## Endpoints
+## API Endpoints
 
-| Endpoint | Descripción |
+| Endpoint | Description |
 |----------|-------------|
-| `GET /manifest.json` | Manifiesto del addon |
-| `GET /catalog/{type}/{id}.json` | Catálogo de películas/series |
-| `GET /meta/{type}/{id}.json` | Metadata de una película/serie |
-| `GET /stream/{type}/{id}.json` | Enlaces de torrent/stream |
+| `GET /manifest.json` | Addon manifest |
+| `GET /catalog/<type>` | List movies or series (type: movie/series) |
+| `GET /meta/<type>/<id>` | Get details for a specific item |
+| `GET /stream/<type>/<id>` | Get torrent streams |
 
-## Estructura del proyecto
+### Query Parameters for Catalog
+- `search` - Search query
+- `skip` - Pagination offset
+- `genre` - Filter by genre
 
-```
-nottorrent/
-├── manifest.json    # Manifiesto Stremio
-├── server.py       # Servidor Flask
-├── requirements.txt # Dependencias
-└── README.md       # Este archivo
-```
+### Query Parameters for Stream
+- `season` - Season number (for series)
+- `episode` - Episode number (for series)
 
-## Limitaciones
+## Environment Variables
 
-- Sin TMDB API Key: funcionalidad limitada a búsqueda básica
-- Los torrents requieren cliente BitTorrent externo
-- Algunos proveedores pueden requerir cookies para acceso
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `TMDB_API_KEY` | TMDB API key for metadata | Built-in demo key |
+| `PORT` | Server port | 3000 |
+
+## Free TMDB API Key
+
+The addon includes a demo TMDB API key. For production, get your own free key at:
+https://www.themoviedb.org/settings/api
+
+## Technical Details
+
+- **Framework**: Flask
+- **Metadata**: TMDB API v3
+- **Torrent Search**: TorrentAPI (torrentapi.org)
+- **Streaming**: Magnet links with WebTorrent integration in Stremio
 
 ## Disclaimer
 
-Este addon es solo para búsqueda de enlaces. El usuario es responsable del uso que haga de los enlaces encontrados.
+This addon is for educational purposes. Make sure you have the right to download/access the content before using this addon. The authors do not host any content and are not responsible for how the addon is used.
 
----
+## License
 
-Hecho con ❤️ para la comunidad Stremio
+MIT License
