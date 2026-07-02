@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "nottorrent_278",
+    "type": "movie",
+    "name": "El Padrino",
+    "poster": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
+    "description": "La saga de la familia Corleone.",
+    "year": 1972,
+    "imdbId": "tt0068646",
+    "genres": [
+      "Crimen"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": false
+  }
+}

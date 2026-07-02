@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "nottorrent_680",
+    "type": "movie",
+    "name": "Pulp Fiction",
+    "poster": "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+    "description": "Historias entrelazadas en el underworld de Los Ángeles.",
+    "year": 1994,
+    "imdbId": "tt0110912",
+    "genres": [
+      "Crimen"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": false
+  }
+}

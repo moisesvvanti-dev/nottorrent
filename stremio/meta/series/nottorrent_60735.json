@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "id": "nottorrent_60735",
+    "type": "series",
+    "name": "The Flash",
+    "poster": "https://image.tmdb.org/t/p/w500/lJA2RCMfsYosfvw8KlGVKjsKl9F.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/z59kJbSfWPhJNKwoJODN3AZ3R33.jpg",
+    "description": "El hombre más rápido del mundo defiende Central City.",
+    "year": 2014,
+    "imdbId": "tt3107288",
+    "genres": [
+      "Acción"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": true,
+    "episodes": []
+  }
+}

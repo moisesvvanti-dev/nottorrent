@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "nottorrent_603",
+    "type": "movie",
+    "name": "The Matrix",
+    "poster": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXbQ7PI.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/fNG7i7RqMErkcqhohV2a6cV1Ehy.jpg",
+    "description": "Un hacker descubre la verdad detrás de su realidad simulada.",
+    "year": 1999,
+    "imdbId": "tt0133093",
+    "genres": [
+      "Sci-Fi"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": false
+  }
+}

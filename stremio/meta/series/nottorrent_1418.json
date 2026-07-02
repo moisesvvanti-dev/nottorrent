@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "id": "nottorrent_1418",
+    "type": "series",
+    "name": "Attack on Titan",
+    "poster": "https://image.tmdb.org/t/p/w500/ty6VawYQF4U2L7Y4uCfE3FlQ1G.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/bTEF4yJmRL7U3bV2BJG1dlkwJwj.jpg",
+    "description": "La humanidad lucha por sobrevivir contra titanes.",
+    "year": 2013,
+    "imdbId": "tt2560140",
+    "genres": [
+      "Animación"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": true,
+    "episodes": []
+  }
+}

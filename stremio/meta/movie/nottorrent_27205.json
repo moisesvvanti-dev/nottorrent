@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "nottorrent_27205",
+    "type": "movie",
+    "name": "Batman: El Caballero de la Noche",
+    "poster": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6mVqhaUSTfV.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/84n9XyFMaFHJyT5MWIhfejT1wC7.jpg",
+    "description": "Batman enfrenta al Joker en Gotham City.",
+    "year": 2008,
+    "imdbId": "tt0468569",
+    "genres": [
+      "Acción"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": false
+  }
+}

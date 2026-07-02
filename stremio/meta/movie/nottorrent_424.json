@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "nottorrent_424",
+    "type": "movie",
+    "name": "La vida es Bella",
+    "poster": "https://image.tmdb.org/t/p/w500/74hM4J3UHY3TPO2gzmWJd2McqMP.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/sJNNMCc6B7KZIY3LH3JMYJJNH5j.jpg",
+    "description": "Un padre usa la imaginación para proteger a su hijo.",
+    "year": 1997,
+    "imdbId": "tt0118799",
+    "genres": [
+      "Drama"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": false
+  }
+}

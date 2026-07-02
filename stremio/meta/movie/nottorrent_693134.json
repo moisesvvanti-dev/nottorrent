@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "nottorrent_693134",
+    "type": "movie",
+    "name": "Dune",
+    "poster": "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg",
+    "description": "Paul Atreides lidera a los Fremen en un planeta desértico.",
+    "year": 2021,
+    "imdbId": "tt15239678",
+    "genres": [
+      "Sci-Fi"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": false
+  }
+}

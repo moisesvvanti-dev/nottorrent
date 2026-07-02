@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "nottorrent_550",
+    "type": "movie",
+    "name": "Fight Club",
+    "poster": "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
+    "description": "Un hombre harto del consumismo encuentra un club secreto.",
+    "year": 1999,
+    "imdbId": "tt0137523",
+    "genres": [
+      "Drama"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": false
+  }
+}

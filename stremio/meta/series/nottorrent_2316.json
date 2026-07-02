@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "id": "nottorrent_2316",
+    "type": "series",
+    "name": "The Office",
+    "poster": "https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/vNpuAxGTl9HsUbHqam3E9CzqCvX.jpg",
+    "description": "La vida cotidiana en la oficina de Dunder Mifflin.",
+    "year": 2005,
+    "imdbId": "tt0386676",
+    "genres": [
+      "Comedia"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": true,
+    "episodes": []
+  }
+}

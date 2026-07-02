@@ -1,0 +1,36 @@
+{
+  "id": "org.nottorrent",
+  "version": "1.0.0",
+  "name": "NotTorrent",
+  "description": "Buscador de torrents para películas y series. Inspirado en Dontorrent.",
+  "logo": "https://i.postimg.cc/jLsFRmM9/dontorrent.png",
+  "background": "",
+  "types": ["movie", "series"],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "nottorrent_movies",
+      "name": "NotTorrent Películas",
+      "extra": [{"name": "search", "isRequired": false}, {"name": "genre", "isRequired": false}, {"name": "skip", "isRequired": false}]
+    },
+    {
+      "type": "series",
+      "id": "nottorrent_series",
+      "name": "NotTorrent Series",
+      "extra": [{"name": "search", "isRequired": false}, {"name": "genre", "isRequired": false}, {"name": "skip", "isRequired": false}]
+    }
+  ],
+  "resources": [
+    {"name": "catalog", "types": ["movie", "series"]},
+    {"name": "meta", "types": ["movie", "series"]},
+    {"name": "stream", "types": ["movie", "series"]}
+  ],
+  "idPrefixes": ["tmdb", "nottorrent"],
+  "behaviorHints": {
+    "adult": false,
+    "configurable": true,
+    "filterSearch": true,
+    "browseable": true
+  },
+  "addonName": "NotTorrent"
+}

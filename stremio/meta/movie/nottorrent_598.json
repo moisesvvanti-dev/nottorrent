@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "nottorrent_598",
+    "type": "movie",
+    "name": "Avatar",
+    "poster": "https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+    "description": "Un marine en un mundo alienígena.",
+    "year": 2009,
+    "imdbId": "tt0499549",
+    "genres": [
+      "Sci-Fi"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": false
+  }
+}

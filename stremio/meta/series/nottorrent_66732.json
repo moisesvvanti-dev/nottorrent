@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "id": "nottorrent_66732",
+    "type": "series",
+    "name": "Stranger Things",
+    "poster": "https://image.tmdb.org/t/p/w500/49WJfeN0moxb9UKfMzfCUYuGk9e.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/56v2KjBlU4XaOv9rVYEQypROD7P.jpg",
+    "description": "Niños descubren secretos oscuros en su pueblo.",
+    "year": 2016,
+    "imdbId": "tt4574334",
+    "genres": [
+      "Sci-Fi"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": true,
+    "episodes": []
+  }
+}

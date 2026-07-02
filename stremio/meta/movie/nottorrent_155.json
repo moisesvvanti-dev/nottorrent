@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "nottorrent_155",
+    "type": "movie",
+    "name": "El Señor de los Anillos: El Retorno del Rey",
+    "poster": "https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+    "background": "https://image.tmdb.org/t/p/w1280/2u7zbn8EudG6kLlBzUYqP8RyFU4.jpg",
+    "description": "La batalla final por la Tierra Media.",
+    "year": 2003,
+    "imdbId": "tt0167260",
+    "genres": [
+      "Fantasía"
+    ],
+    "language": "es",
+    "runtime": 0,
+    "rating": "8.5",
+    "isMultiple": false
+  }
+}
