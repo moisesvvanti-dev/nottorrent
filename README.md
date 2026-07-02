@@ -1,105 +1,56 @@
 # NotTorrent - Stremio Addon
 
-A Stremio addon that provides torrent-based streaming for movies and series using public torrent search APIs and TMDB for metadata.
+> Buscador de torrents para películas y series. 100% estático, hospedado en GitHub Pages.
 
-## Features
+## Instalar en Stremio
 
-- **Movie Catalog**: Browse trending movies and search by title
-- **Series Catalog**: Browse trending TV shows and search by title  
-- **Torrent Streams**: Search and stream torrents directly in Stremio
-- **TMDB Integration**: Rich metadata from The Movie Database
-- **Episode Support**: Find specific episodes for TV series
+1. Abrir Stremio → **Addons** → **Install Addon**
+2. Introducir la URL:
 
-## Installation
-
-### Option 1: Deploy to Heroku (Recommended)
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-Or manually:
-```bash
-heroku create nottorrent-addon
-heroku push main master
-heroku open
+```
+https://moisesvvanti-dev.github.io/nottorrent/manifest.json
 ```
 
-### Option 2: Run Locally
+## Estructura de archivos
 
-```bash
-# Clone the repository
-git clone https://github.com/moisesvvanti/nottorrent.git
-cd nottorrent
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the server
-python server.py
+```
+nottorrent/
+├── manifest.json                    ← Stremio lee daqui
+├── catalog/
+│   ├── movie/nottorrent_movies.json
+│   └── series/nottorrent_series.json
+├── meta/
+│   ├── movie/nottorrent_*.json      ← 10 películas
+│   └── series/nottorrent_*.json      ← 10 series
+├── stream/
+│   ├── movie/nottorrent_*.json      ← streams por película
+│   └── series/nottorrent_*.json      ← streams por serie
+└── README.md
 ```
 
-The server will start on `http://localhost:3000`
+## Cómo funciona
 
-### Option 3: Deploy to Railway
+El addon es **100% JSON estático**. Stremio solicita:
 
-1. Go to [railway.app](https://railway.app)
-2. Connect your GitHub repo
-3. Deploy automatically
+| Recurso | URL |
+|---------|-----|
+| Manifiesto | `/manifest.json` |
+| Catálogo | `/catalog/{type}/{id}.json` |
+| Metadata | `/meta/{type}/{id}.json` |
+| Streams | `/stream/{type}/{id}.json` |
 
-### Option 4: Deploy to Render
+Cada stream tiene `infoHash` de torrent (para clientes BitTorrent) y `behaviorHints.open_in_webbrowser: true`.
 
-1. Go to [render.com](https://render.com)
-2. Create a new Web Service
-3. Connect your GitHub repo
-4. Set start command: `gunicorn server:app`
+## Añadir más películas/series
 
-## Adding to Stremio
+1. Editar `catalog/movie/nottorrent_movies.json` o `catalog/series/nottorrent_series.json`
+2. Crear `meta/{type}/nottorrent_{id}.json` con datos de TMDB
+3. Crear `stream/{type}/nottorrent_{id}.json` con los enlaces torrent
 
-1. Open Stremio
-2. Go to **Addons** → **Install from URL**
-3. Enter your addon URL (e.g., `https://your-addon.herokuapp.com/manifest.json`)
-4. Click **Install**
+## Desplegar
 
-## API Endpoints
+Los cambios en `main` se publican automáticamente en GitHub Pages.
 
-| Endpoint | Description |
-|----------|-------------|
-| `GET /manifest.json` | Addon manifest |
-| `GET /catalog/<type>` | List movies or series (type: movie/series) |
-| `GET /meta/<type>/<id>` | Get details for a specific item |
-| `GET /stream/<type>/<id>` | Get torrent streams |
+---
 
-### Query Parameters for Catalog
-- `search` - Search query
-- `skip` - Pagination offset
-- `genre` - Filter by genre
-
-### Query Parameters for Stream
-- `season` - Season number (for series)
-- `episode` - Episode number (for series)
-
-## Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `TMDB_API_KEY` | TMDB API key for metadata | Built-in demo key |
-| `PORT` | Server port | 3000 |
-
-## Free TMDB API Key
-
-The addon includes a demo TMDB API key. For production, get your own free key at:
-https://www.themoviedb.org/settings/api
-
-## Technical Details
-
-- **Framework**: Flask
-- **Metadata**: TMDB API v3
-- **Torrent Search**: TorrentAPI (torrentapi.org)
-- **Streaming**: Magnet links with WebTorrent integration in Stremio
-
-## Disclaimer
-
-This addon is for educational purposes. Make sure you have the right to download/access the content before using this addon. The authors do not host any content and are not responsible for how the addon is used.
-
-## License
-
-MIT License
+Inspirado en Dontorrent/Stremio. Disclaimer: solo búsqueda de enlaces.
