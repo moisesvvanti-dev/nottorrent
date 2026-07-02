@@ -1,0 +1,35 @@
+{
+  "id": "nottorrent",
+  "name": "NotTorrent",
+  "description": "Buscador de torrents para películas y series con enlaces magnet, info de TMDB y más.",
+  "version": "1.0.0",
+  "logo": "https://i.postimg.cc/jLsFRmM9/dontorrent.png",
+  "background": "",
+  "types": ["movie", "series"],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "nottorrent_movies",
+      "name": "NotTorrent Películas",
+      "extra": [
+        {"name": "search", "isRequired": false},
+        {"name": "genre", "isRequired": false}
+      ]
+    },
+    {
+      "type": "series",
+      "id": "nottorrent_series",
+      "name": "NotTorrent Series",
+      "extra": [
+        {"name": "search", "isRequired": false},
+        {"name": "genre", "isRequired": false}
+      ]
+    }
+  ],
+  "resources": ["catalog", "meta", "stream"],
+  "idPrefixes": ["nottorrent", "tmdb"],
+  "behaviorHints": {
+    "adult": false,
+    "configurable": true
+  }
+}
